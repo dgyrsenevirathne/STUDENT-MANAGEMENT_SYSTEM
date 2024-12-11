@@ -33,6 +33,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// server/server.js
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'profile.html'));
+});
+
 // Start Server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

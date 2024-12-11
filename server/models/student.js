@@ -1,3 +1,4 @@
+// server/models/student.js
 const mongoose = require('mongoose');
 
 const studentSchema = new mongoose.Schema({
@@ -17,7 +18,15 @@ const studentSchema = new mongoose.Schema({
     course: {
         type: String,
         required: true
-    }
+    },
+    grades: [{
+        course: String,
+        grade: String
+    }],
+    materials: [{
+        title: String,
+        url: String
+    }]
 });
 
 module.exports = mongoose.model('Student', studentSchema);

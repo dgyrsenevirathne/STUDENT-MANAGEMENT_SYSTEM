@@ -1,0 +1,29 @@
+<!-- server/public/profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Profile</h1>
+        <form id="profileForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="text" id="course" placeholder="Course" required>
+            <button type="submit">Update Profile</button>
+        </form>
+        <h2>Grades</h2>
+        <ul id="gradesList"></ul>
+        <h2>Course Materials</h2>
+        <ul id="materialsList"></ul>
+    </div>
+    <script src="js/profile.js"></script>
+</body>
+
+</html>
