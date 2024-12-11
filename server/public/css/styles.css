@@ -1,0 +1,128 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f7f8;
+    /* Light background color for a clean look */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    /* Bootstrap primary color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Darker blue for button hover effect */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    /* Highlight the header with blue */
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+td:hover {
+    background-color: #f4f4f4;
+    /* Light gray on hover for row highlights */
+}
+
+/* Adding a shadow effect to the container for depth */
+.container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    /* White background for container */
+    padding: 20px;
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    input,
+    button {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+}
+
+#searchInput {
+    width: 97%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Focus effect */
+#searchInput:focus {
+    border-color: #007BFF;
+    /* Blue border on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    /* Subtle blue glow */
+}
+
+/* Hover effect */
+#searchInput:hover {
+    border-color: #888;
+    /* Slightly darker border on hover */
+}
+
+/* Placeholder text styling */
+#searchInput::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Disable text selection for aesthetic reasons when input is empty */
+#searchInput:empty {
+    user-select: none;
+}
