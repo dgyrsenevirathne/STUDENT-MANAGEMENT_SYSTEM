@@ -6,6 +6,7 @@ const studentRoutes = require('./routes/studentRoutes');
 const passport = require('./config/passport');
 const path = require('path'); // Import path module for handling file paths
 const session = require('express-session');
+const attendanceRoutes = require('./routes/attendanceRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -22,6 +23,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.static('public')); // Serve static files
+// Mount the attendance routes
+app.use('/api/attendance', attendanceRoutes);
+
 app.use(express.static(path.join(__dirname, 'public'))); // Use path.join for cleaner and platform-independent path construction
 
 

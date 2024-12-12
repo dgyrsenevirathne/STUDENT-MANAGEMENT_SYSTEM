@@ -26,7 +26,11 @@ const studentSchema = new mongoose.Schema({
     materials: [{
         title: String,
         url: String
-    }]
+    }],
+    attendance: {
+        type: Number,
+        default: 0
+    }
 });
 
 module.exports = mongoose.model('Student', studentSchema);

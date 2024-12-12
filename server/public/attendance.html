@@ -1,0 +1,41 @@
+<!-- public/attendance.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Attendance</h1>
+    <form id="attendanceForm">
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId"><br><br>
+        <label for="classId">Class ID:</label>
+        <input type="text" id="classId" name="classId"><br><br>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+        </select><br><br>
+        <button type="submit">Mark Attendance</button>
+    </form>
+    <table id="attendanceList">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Class Name</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="js/attendance.js"></script>
+</body>
+
+</html>
